@@ -1,0 +1,176 @@
+sgdheeban@Pavithras-MacBook-Pro lit % npm run dev
+
+> lit@1.0.0 dev
+> node script.js
+
+[Lit-JS-SDK v2.1.114] Oh hey you are running in Node.js!
+[Lit-JS-SDK v2.1.114] handshakeWithSgx https://serrano.litgateway.com:7370/web/handshake
+[Lit-JS-SDK v2.1.114] sendCommandToNode with url https://serrano.litgateway.com:7370/web/handshake and data { clientPublicKey: 'test' }
+[Lit-JS-SDK v2.1.114] handshakeWithSgx https://serrano.litgateway.com:7371/web/handshake
+[Lit-JS-SDK v2.1.114] sendCommandToNode with url https://serrano.litgateway.com:7371/web/handshake and data { clientPublicKey: 'test' }
+[Lit-JS-SDK v2.1.114] handshakeWithSgx https://serrano.litgateway.com:7372/web/handshake
+[Lit-JS-SDK v2.1.114] sendCommandToNode with url https://serrano.litgateway.com:7372/web/handshake and data { clientPublicKey: 'test' }
+[Lit-JS-SDK v2.1.114] handshakeWithSgx https://serrano.litgateway.com:7373/web/handshake
+[Lit-JS-SDK v2.1.114] sendCommandToNode with url https://serrano.litgateway.com:7373/web/handshake and data { clientPublicKey: 'test' }
+[Lit-JS-SDK v2.1.114] handshakeWithSgx https://serrano.litgateway.com:7374/web/handshake
+[Lit-JS-SDK v2.1.114] sendCommandToNode with url https://serrano.litgateway.com:7374/web/handshake and data { clientPublicKey: 'test' }
+[Lit-JS-SDK v2.1.114] handshakeWithSgx https://serrano.litgateway.com:7375/web/handshake
+[Lit-JS-SDK v2.1.114] sendCommandToNode with url https://serrano.litgateway.com:7375/web/handshake and data { clientPublicKey: 'test' }
+[Lit-JS-SDK v2.1.114] handshakeWithSgx https://serrano.litgateway.com:7376/web/handshake
+[Lit-JS-SDK v2.1.114] sendCommandToNode with url https://serrano.litgateway.com:7376/web/handshake and data { clientPublicKey: 'test' }
+[Lit-JS-SDK v2.1.114] handshakeWithSgx https://serrano.litgateway.com:7377/web/handshake
+[Lit-JS-SDK v2.1.114] sendCommandToNode with url https://serrano.litgateway.com:7377/web/handshake and data { clientPublicKey: 'test' }
+[Lit-JS-SDK v2.1.114] handshakeWithSgx https://serrano.litgateway.com:7378/web/handshake
+[Lit-JS-SDK v2.1.114] sendCommandToNode with url https://serrano.litgateway.com:7378/web/handshake and data { clientPublicKey: 'test' }
+[Lit-JS-SDK v2.1.114] handshakeWithSgx https://serrano.litgateway.com:7379/web/handshake
+[Lit-JS-SDK v2.1.114] sendCommandToNode with url https://serrano.litgateway.com:7379/web/handshake and data { clientPublicKey: 'test' }
+[Lit-JS-SDK v2.1.114] ✅ [BLS SDK] wasmExports loaded. 310 functions available. Run 'wasmExports' in the console to see them.
+[Lit-JS-SDK v2.1.114] ✅ [ECDSA SDK] wasmECDSA loaded. 2 functions available. Run 'wasmECDSA' in the console to see them.
+[Lit-JS-SDK v2.1.114] 🔥 lit is ready. "litNodeClient" variable is ready to use globally.
+hello world LitNodeClientNodeJs {
+  setCustomBootstrapUrls: [Function (anonymous)],
+  getAuthSigOrSessionAuthSig: [Function (anonymous)],
+  getLitActionRequestBody: [Function (anonymous)],
+  getJWTParams: [Function (anonymous)],
+  parseResponses: [Function (anonymous)],
+  getSessionKey: [Function (anonymous)],
+  getSessionCapabilities: [Function (anonymous)],
+  getExpiration: [Function (anonymous)],
+  getWalletSig: [AsyncFunction (anonymous)],
+  checkNeedToResignSessionKey: [AsyncFunction (anonymous)],
+  sendCommandToNode: [AsyncFunction (anonymous)],
+  getJsExecutionShares: [AsyncFunction (anonymous)],
+  getChainDataSigningShare: [AsyncFunction (anonymous)],
+  getSigningShare: [AsyncFunction (anonymous)],
+  getDecryptionShare: [AsyncFunction (anonymous)],
+  storeSigningConditionWithNode: [AsyncFunction (anonymous)],
+  storeEncryptionConditionWithNode: [AsyncFunction (anonymous)],
+  signConditionEcdsa: [AsyncFunction (anonymous)],
+  handshakeWithSgx: [AsyncFunction (anonymous)],
+  combineSharesAndGetJWT: [Function (anonymous)],
+  getFormattedAccessControlConditions: [Function (anonymous)],
+  getHashedAccessControlConditions: [AsyncFunction (anonymous)],
+  getNodePromises: [Function (anonymous)],
+  handleNodePromises: [AsyncFunction (anonymous)],
+  runOnTargetedNodes: [AsyncFunction (anonymous)],
+  throwNodeError: [Function (anonymous)],
+  getSessionSignatures: [Function (anonymous)],
+  getSignatures: [Function (anonymous)],
+  getDecryptions: [AsyncFunction (anonymous)],
+  getSignature: [AsyncFunction (anonymous)],
+  executeJs: [AsyncFunction (anonymous)],
+  getSignedChainDataToken: [AsyncFunction (anonymous)],
+  getSignedToken: [AsyncFunction (anonymous)],
+  saveSigningCondition: [AsyncFunction (anonymous)],
+  getEncryptionKey: [AsyncFunction (anonymous)],
+  saveEncryptionKey: [AsyncFunction (anonymous)],
+  validateAndSignEcdsa: [AsyncFunction (anonymous)],
+  connect: [Function (anonymous)],
+  signSessionKey: [AsyncFunction (anonymous)],
+  getSignSessionKeyShares: [AsyncFunction (anonymous)],
+  generateAuthMethodForWebAuthn: [Function (anonymous)],
+  generateAuthMethodForDiscord: [Function (anonymous)],
+  generateAuthMethodForGoogle: [Function (anonymous)],
+  generateAuthMethodForGoogleJWT: [Function (anonymous)],
+  parseResource: [Function (anonymous)],
+  getSessionSigs: [AsyncFunction (anonymous)],
+  config: {
+    alertWhenUnauthorized: true,
+    minNodeCount: 6,
+    debug: true,
+    bootstrapUrls: [
+      'https://serrano.litgateway.com:7370',
+      'https://serrano.litgateway.com:7371',
+      'https://serrano.litgateway.com:7372',
+      'https://serrano.litgateway.com:7373',
+      'https://serrano.litgateway.com:7374',
+      'https://serrano.litgateway.com:7375',
+      'https://serrano.litgateway.com:7376',
+      'https://serrano.litgateway.com:7377',
+      'https://serrano.litgateway.com:7378',
+      'https://serrano.litgateway.com:7379'
+    ],
+    litNetwork: 'serrano',
+    connectTimeout: 20000
+  },
+  defaultAuthCallback: undefined,
+  connectedNodes: Set(10) {
+    'https://serrano.litgateway.com:7370',
+    'https://serrano.litgateway.com:7372',
+    'https://serrano.litgateway.com:7371',
+    'https://serrano.litgateway.com:7374',
+    'https://serrano.litgateway.com:7378',
+    'https://serrano.litgateway.com:7376',
+    'https://serrano.litgateway.com:7373',
+    'https://serrano.litgateway.com:7379',
+    'https://serrano.litgateway.com:7377',
+    'https://serrano.litgateway.com:7375'
+  },
+  serverKeys: {
+    'https://serrano.litgateway.com:7370': {
+      serverPubKey: 'test',
+      subnetPubKey: '875f6d8f71b7ff3aa979454742168567906719c021f2d48868e11c8fb0843d36e81c7fd5b3ad2bdc3d94b84635d0c136',
+      networkPubKey: '875f6d8f71b7ff3aa979454742168567906719c021f2d48868e11c8fb0843d36e81c7fd5b3ad2bdc3d94b84635d0c136',
+      networkPubKeySet: '7e3a2242912b1d0e9d970e2742b4d03eeab3a917970dcb12883a13e21391782274c2d7966b7f2baf6d630b0e2897b0b8a96aa95a49193086a6bc5b3c8a872f2476c5b3eeb413d3a81f060e6aa2a25f8c5a8a38bfe51ef4fdaa9308c75283b58c9035fd2ed3cd307ad2b9f3e4982115f1ea8f7f0bf4827abb67cd8f8bdb826a8327d50958c7f790b70b46eadae5a12a8d9d3a7f5c217f58b09d20f6f5f7bfe03aa722adf8797f447e9b94848a891e25fff31f582cca2e468c08f86d166d818aa61b34c4a2ba87c1b288851bcb92e536a7d20076ec3a2de51e6437c77b816810179c0d0afd73d8edec1f8462a49889d189880768842bf52f224dc9ccadcba00fccf593df69d07577ae86b6a175769bbf53c3090d18075fc798eb64febe705c438e36c1d03546b8943ddc2badb3d57f1ce8363d84b08f1ce16888d4f221c019679067851642474579a93affb7718f6d5f870000000000000007'
+    },
+    'https://serrano.litgateway.com:7372': {
+      serverPubKey: 'test',
+      subnetPubKey: '875f6d8f71b7ff3aa979454742168567906719c021f2d48868e11c8fb0843d36e81c7fd5b3ad2bdc3d94b84635d0c136',
+      networkPubKey: '875f6d8f71b7ff3aa979454742168567906719c021f2d48868e11c8fb0843d36e81c7fd5b3ad2bdc3d94b84635d0c136',
+      networkPubKeySet: '7e3a2242912b1d0e9d970e2742b4d03eeab3a917970dcb12883a13e21391782274c2d7966b7f2baf6d630b0e2897b0b8a96aa95a49193086a6bc5b3c8a872f2476c5b3eeb413d3a81f060e6aa2a25f8c5a8a38bfe51ef4fdaa9308c75283b58c9035fd2ed3cd307ad2b9f3e4982115f1ea8f7f0bf4827abb67cd8f8bdb826a8327d50958c7f790b70b46eadae5a12a8d9d3a7f5c217f58b09d20f6f5f7bfe03aa722adf8797f447e9b94848a891e25fff31f582cca2e468c08f86d166d818aa61b34c4a2ba87c1b288851bcb92e536a7d20076ec3a2de51e6437c77b816810179c0d0afd73d8edec1f8462a49889d189880768842bf52f224dc9ccadcba00fccf593df69d07577ae86b6a175769bbf53c3090d18075fc798eb64febe705c438e36c1d03546b8943ddc2badb3d57f1ce8363d84b08f1ce16888d4f221c019679067851642474579a93affb7718f6d5f870000000000000007'
+    },
+    'https://serrano.litgateway.com:7371': {
+      serverPubKey: 'test',
+      subnetPubKey: '875f6d8f71b7ff3aa979454742168567906719c021f2d48868e11c8fb0843d36e81c7fd5b3ad2bdc3d94b84635d0c136',
+      networkPubKey: '875f6d8f71b7ff3aa979454742168567906719c021f2d48868e11c8fb0843d36e81c7fd5b3ad2bdc3d94b84635d0c136',
+      networkPubKeySet: '7e3a2242912b1d0e9d970e2742b4d03eeab3a917970dcb12883a13e21391782274c2d7966b7f2baf6d630b0e2897b0b8a96aa95a49193086a6bc5b3c8a872f2476c5b3eeb413d3a81f060e6aa2a25f8c5a8a38bfe51ef4fdaa9308c75283b58c9035fd2ed3cd307ad2b9f3e4982115f1ea8f7f0bf4827abb67cd8f8bdb826a8327d50958c7f790b70b46eadae5a12a8d9d3a7f5c217f58b09d20f6f5f7bfe03aa722adf8797f447e9b94848a891e25fff31f582cca2e468c08f86d166d818aa61b34c4a2ba87c1b288851bcb92e536a7d20076ec3a2de51e6437c77b816810179c0d0afd73d8edec1f8462a49889d189880768842bf52f224dc9ccadcba00fccf593df69d07577ae86b6a175769bbf53c3090d18075fc798eb64febe705c438e36c1d03546b8943ddc2badb3d57f1ce8363d84b08f1ce16888d4f221c019679067851642474579a93affb7718f6d5f870000000000000007'
+    },
+    'https://serrano.litgateway.com:7374': {
+      serverPubKey: 'test',
+      subnetPubKey: '875f6d8f71b7ff3aa979454742168567906719c021f2d48868e11c8fb0843d36e81c7fd5b3ad2bdc3d94b84635d0c136',
+      networkPubKey: '875f6d8f71b7ff3aa979454742168567906719c021f2d48868e11c8fb0843d36e81c7fd5b3ad2bdc3d94b84635d0c136',
+      networkPubKeySet: '7e3a2242912b1d0e9d970e2742b4d03eeab3a917970dcb12883a13e21391782274c2d7966b7f2baf6d630b0e2897b0b8a96aa95a49193086a6bc5b3c8a872f2476c5b3eeb413d3a81f060e6aa2a25f8c5a8a38bfe51ef4fdaa9308c75283b58c9035fd2ed3cd307ad2b9f3e4982115f1ea8f7f0bf4827abb67cd8f8bdb826a8327d50958c7f790b70b46eadae5a12a8d9d3a7f5c217f58b09d20f6f5f7bfe03aa722adf8797f447e9b94848a891e25fff31f582cca2e468c08f86d166d818aa61b34c4a2ba87c1b288851bcb92e536a7d20076ec3a2de51e6437c77b816810179c0d0afd73d8edec1f8462a49889d189880768842bf52f224dc9ccadcba00fccf593df69d07577ae86b6a175769bbf53c3090d18075fc798eb64febe705c438e36c1d03546b8943ddc2badb3d57f1ce8363d84b08f1ce16888d4f221c019679067851642474579a93affb7718f6d5f870000000000000007'
+    },
+    'https://serrano.litgateway.com:7378': {
+      serverPubKey: 'test',
+      subnetPubKey: '875f6d8f71b7ff3aa979454742168567906719c021f2d48868e11c8fb0843d36e81c7fd5b3ad2bdc3d94b84635d0c136',
+      networkPubKey: '875f6d8f71b7ff3aa979454742168567906719c021f2d48868e11c8fb0843d36e81c7fd5b3ad2bdc3d94b84635d0c136',
+      networkPubKeySet: '7e3a2242912b1d0e9d970e2742b4d03eeab3a917970dcb12883a13e21391782274c2d7966b7f2baf6d630b0e2897b0b8a96aa95a49193086a6bc5b3c8a872f2476c5b3eeb413d3a81f060e6aa2a25f8c5a8a38bfe51ef4fdaa9308c75283b58c9035fd2ed3cd307ad2b9f3e4982115f1ea8f7f0bf4827abb67cd8f8bdb826a8327d50958c7f790b70b46eadae5a12a8d9d3a7f5c217f58b09d20f6f5f7bfe03aa722adf8797f447e9b94848a891e25fff31f582cca2e468c08f86d166d818aa61b34c4a2ba87c1b288851bcb92e536a7d20076ec3a2de51e6437c77b816810179c0d0afd73d8edec1f8462a49889d189880768842bf52f224dc9ccadcba00fccf593df69d07577ae86b6a175769bbf53c3090d18075fc798eb64febe705c438e36c1d03546b8943ddc2badb3d57f1ce8363d84b08f1ce16888d4f221c019679067851642474579a93affb7718f6d5f870000000000000007'
+    },
+    'https://serrano.litgateway.com:7376': {
+      serverPubKey: 'test',
+      subnetPubKey: '875f6d8f71b7ff3aa979454742168567906719c021f2d48868e11c8fb0843d36e81c7fd5b3ad2bdc3d94b84635d0c136',
+      networkPubKey: '875f6d8f71b7ff3aa979454742168567906719c021f2d48868e11c8fb0843d36e81c7fd5b3ad2bdc3d94b84635d0c136',
+      networkPubKeySet: '7e3a2242912b1d0e9d970e2742b4d03eeab3a917970dcb12883a13e21391782274c2d7966b7f2baf6d630b0e2897b0b8a96aa95a49193086a6bc5b3c8a872f2476c5b3eeb413d3a81f060e6aa2a25f8c5a8a38bfe51ef4fdaa9308c75283b58c9035fd2ed3cd307ad2b9f3e4982115f1ea8f7f0bf4827abb67cd8f8bdb826a8327d50958c7f790b70b46eadae5a12a8d9d3a7f5c217f58b09d20f6f5f7bfe03aa722adf8797f447e9b94848a891e25fff31f582cca2e468c08f86d166d818aa61b34c4a2ba87c1b288851bcb92e536a7d20076ec3a2de51e6437c77b816810179c0d0afd73d8edec1f8462a49889d189880768842bf52f224dc9ccadcba00fccf593df69d07577ae86b6a175769bbf53c3090d18075fc798eb64febe705c438e36c1d03546b8943ddc2badb3d57f1ce8363d84b08f1ce16888d4f221c019679067851642474579a93affb7718f6d5f870000000000000007'
+    },
+    'https://serrano.litgateway.com:7373': {
+      serverPubKey: 'test',
+      subnetPubKey: '875f6d8f71b7ff3aa979454742168567906719c021f2d48868e11c8fb0843d36e81c7fd5b3ad2bdc3d94b84635d0c136',
+      networkPubKey: '875f6d8f71b7ff3aa979454742168567906719c021f2d48868e11c8fb0843d36e81c7fd5b3ad2bdc3d94b84635d0c136',
+      networkPubKeySet: '7e3a2242912b1d0e9d970e2742b4d03eeab3a917970dcb12883a13e21391782274c2d7966b7f2baf6d630b0e2897b0b8a96aa95a49193086a6bc5b3c8a872f2476c5b3eeb413d3a81f060e6aa2a25f8c5a8a38bfe51ef4fdaa9308c75283b58c9035fd2ed3cd307ad2b9f3e4982115f1ea8f7f0bf4827abb67cd8f8bdb826a8327d50958c7f790b70b46eadae5a12a8d9d3a7f5c217f58b09d20f6f5f7bfe03aa722adf8797f447e9b94848a891e25fff31f582cca2e468c08f86d166d818aa61b34c4a2ba87c1b288851bcb92e536a7d20076ec3a2de51e6437c77b816810179c0d0afd73d8edec1f8462a49889d189880768842bf52f224dc9ccadcba00fccf593df69d07577ae86b6a175769bbf53c3090d18075fc798eb64febe705c438e36c1d03546b8943ddc2badb3d57f1ce8363d84b08f1ce16888d4f221c019679067851642474579a93affb7718f6d5f870000000000000007'
+    },
+    'https://serrano.litgateway.com:7379': {
+      serverPubKey: 'test',
+      subnetPubKey: '875f6d8f71b7ff3aa979454742168567906719c021f2d48868e11c8fb0843d36e81c7fd5b3ad2bdc3d94b84635d0c136',
+      networkPubKey: '875f6d8f71b7ff3aa979454742168567906719c021f2d48868e11c8fb0843d36e81c7fd5b3ad2bdc3d94b84635d0c136',
+      networkPubKeySet: '7e3a2242912b1d0e9d970e2742b4d03eeab3a917970dcb12883a13e21391782274c2d7966b7f2baf6d630b0e2897b0b8a96aa95a49193086a6bc5b3c8a872f2476c5b3eeb413d3a81f060e6aa2a25f8c5a8a38bfe51ef4fdaa9308c75283b58c9035fd2ed3cd307ad2b9f3e4982115f1ea8f7f0bf4827abb67cd8f8bdb826a8327d50958c7f790b70b46eadae5a12a8d9d3a7f5c217f58b09d20f6f5f7bfe03aa722adf8797f447e9b94848a891e25fff31f582cca2e468c08f86d166d818aa61b34c4a2ba87c1b288851bcb92e536a7d20076ec3a2de51e6437c77b816810179c0d0afd73d8edec1f8462a49889d189880768842bf52f224dc9ccadcba00fccf593df69d07577ae86b6a175769bbf53c3090d18075fc798eb64febe705c438e36c1d03546b8943ddc2badb3d57f1ce8363d84b08f1ce16888d4f221c019679067851642474579a93affb7718f6d5f870000000000000007'
+    },
+    'https://serrano.litgateway.com:7377': {
+      serverPubKey: 'test',
+      subnetPubKey: '875f6d8f71b7ff3aa979454742168567906719c021f2d48868e11c8fb0843d36e81c7fd5b3ad2bdc3d94b84635d0c136',
+      networkPubKey: '875f6d8f71b7ff3aa979454742168567906719c021f2d48868e11c8fb0843d36e81c7fd5b3ad2bdc3d94b84635d0c136',
+      networkPubKeySet: '7e3a2242912b1d0e9d970e2742b4d03eeab3a917970dcb12883a13e21391782274c2d7966b7f2baf6d630b0e2897b0b8a96aa95a49193086a6bc5b3c8a872f2476c5b3eeb413d3a81f060e6aa2a25f8c5a8a38bfe51ef4fdaa9308c75283b58c9035fd2ed3cd307ad2b9f3e4982115f1ea8f7f0bf4827abb67cd8f8bdb826a8327d50958c7f790b70b46eadae5a12a8d9d3a7f5c217f58b09d20f6f5f7bfe03aa722adf8797f447e9b94848a891e25fff31f582cca2e468c08f86d166d818aa61b34c4a2ba87c1b288851bcb92e536a7d20076ec3a2de51e6437c77b816810179c0d0afd73d8edec1f8462a49889d189880768842bf52f224dc9ccadcba00fccf593df69d07577ae86b6a175769bbf53c3090d18075fc798eb64febe705c438e36c1d03546b8943ddc2badb3d57f1ce8363d84b08f1ce16888d4f221c019679067851642474579a93affb7718f6d5f870000000000000007'
+    },
+    'https://serrano.litgateway.com:7375': {
+      serverPubKey: 'test',
+      subnetPubKey: '875f6d8f71b7ff3aa979454742168567906719c021f2d48868e11c8fb0843d36e81c7fd5b3ad2bdc3d94b84635d0c136',
+      networkPubKey: '875f6d8f71b7ff3aa979454742168567906719c021f2d48868e11c8fb0843d36e81c7fd5b3ad2bdc3d94b84635d0c136',
+      networkPubKeySet: '7e3a2242912b1d0e9d970e2742b4d03eeab3a917970dcb12883a13e21391782274c2d7966b7f2baf6d630b0e2897b0b8a96aa95a49193086a6bc5b3c8a872f2476c5b3eeb413d3a81f060e6aa2a25f8c5a8a38bfe51ef4fdaa9308c75283b58c9035fd2ed3cd307ad2b9f3e4982115f1ea8f7f0bf4827abb67cd8f8bdb826a8327d50958c7f790b70b46eadae5a12a8d9d3a7f5c217f58b09d20f6f5f7bfe03aa722adf8797f447e9b94848a891e25fff31f582cca2e468c08f86d166d818aa61b34c4a2ba87c1b288851bcb92e536a7d20076ec3a2de51e6437c77b816810179c0d0afd73d8edec1f8462a49889d189880768842bf52f224dc9ccadcba00fccf593df69d07577ae86b6a175769bbf53c3090d18075fc798eb64febe705c438e36c1d03546b8943ddc2badb3d57f1ce8363d84b08f1ce16888d4f221c019679067851642474579a93affb7718f6d5f870000000000000007'
+    }
+  },
+  ready: true,
+  subnetPubKey: '875f6d8f71b7ff3aa979454742168567906719c021f2d48868e11c8fb0843d36e81c7fd5b3ad2bdc3d94b84635d0c136',
+  networkPubKey: '875f6d8f71b7ff3aa979454742168567906719c021f2d48868e11c8fb0843d36e81c7fd5b3ad2bdc3d94b84635d0c136',
+  networkPubKeySet: '7e3a2242912b1d0e9d970e2742b4d03eeab3a917970dcb12883a13e21391782274c2d7966b7f2baf6d630b0e2897b0b8a96aa95a49193086a6bc5b3c8a872f2476c5b3eeb413d3a81f060e6aa2a25f8c5a8a38bfe51ef4fdaa9308c75283b58c9035fd2ed3cd307ad2b9f3e4982115f1ea8f7f0bf4827abb67cd8f8bdb826a8327d50958c7f790b70b46eadae5a12a8d9d3a7f5c217f58b09d20f6f5f7bfe03aa722adf8797f447e9b94848a891e25fff31f582cca2e468c08f86d166d818aa61b34c4a2ba87c1b288851bcb92e536a7d20076ec3a2de51e6437c77b816810179c0d0afd73d8edec1f8462a49889d189880768842bf52f224dc9ccadcba00fccf593df69d07577ae86b6a175769bbf53c3090d18075fc798eb64febe705c438e36c1d03546b8943ddc2badb3d57f1ce8363d84b08f1ce16888d4f221c019679067851642474579a93affb7718f6d5f870000000000000007'
+}
+sgdheeban@Pavithras-MacBook-Pro lit % 
