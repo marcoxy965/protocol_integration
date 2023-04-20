@@ -15,11 +15,19 @@ go();
 // you need an AuthSig to auth with the nodes
 // normally you would obtain an AuthSig by calling LitJsSdk.checkAndSignAuthMessage({chain})
 const authSig = {
-  sig: "0x0e50e370ba45b391c65f3739618c652c121c0e88cd6b99202815bdf29b247f970a92cd74f269792695e87e4a8313884ea019a0cc177eb7e8519b267190a22b061b",
-  derivedVia: "web3.eth.personal.sign",
-  signedMessage:
-  "localhost:1210 wants you to sign in with your Ethereum account:\n0xeE52f6E8F8F075Bb6119958c1ACeB16C788e57d6\n\n\nURI: http://localhost:1210/auth\nVersion: 1\nChain ID: 1\nNonce: GJmYcbyssnunj5unD\nIssued At: 2023-04-18T06:01:02.599Z\nExpiration Time: 2023-04-19T06:01:02.586Z",
-  address: "0xee52f6e8f8f075bb6119958c1aceb16c788e57d6",
+  sig: '0xeb271a2a695b7bc3655c89919ba45469ed006ab48f2669cf30ac16c16e4f72b2502aa1d6b49b9679a7ce2e6417183172b944f5e915a5a0034a045abcb4740e5a1c',
+  derivedVia: 'web3.eth.personal.sign',
+  signedMessage: 'localhost:1210 wants you to sign in with your Ethereum account:\n' +
+    '0xeE52f6E8F8F075Bb6119958c1ACeB16C788e57d6\n' +
+    '\n' +
+    '\n' +
+    'URI: http://localhost:1210/auth\n' +
+    'Version: 1\n' +
+    'Chain ID: 1\n' +
+    'Nonce: 4L08882G7gyr5UNAo\n' +
+    'Issued At: 2023-04-19T23:41:46.774Z\n' +
+    'Expiration Time: 2023-04-20T23:41:46.759Z',
+  address: '0xee52f6e8f8f075bb6119958c1aceb16c788e57d6'
 };
 
 const runLitAction = async () => {
