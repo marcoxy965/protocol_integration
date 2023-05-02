@@ -17,7 +17,7 @@ const go = async () => {
   const temp = resp.properties.periods[0].temperature;
 
   // only sign if the temperature is above 60.  if it's below 60, exit.
-  if (temp < 60) {
+  if (temp >= 60) {
     return;
   }
   
@@ -33,20 +33,20 @@ go();
 // you need an AuthSig to auth with the nodes
 // normally you would obtain an AuthSig by calling LitJsSdk.checkAndSignAuthMessage({chain})
 const authSig = {
-    sig: '0xeb271a2a695b7bc3655c89919ba45469ed006ab48f2669cf30ac16c16e4f72b2502aa1d6b49b9679a7ce2e6417183172b944f5e915a5a0034a045abcb4740e5a1c',
+    sig: '0xdaed0e0d3a822a89173e95b717d70ec79889f3e36ce503c015874099cb0f62a8189403973b1e292d35a0e1745a40862b92b4e21b3fee979d7e9b5881a71ecf081c',
     derivedVia: 'web3.eth.personal.sign',
-    signedMessage: 'localhost:1210 wants you to sign in with your Ethereum account:\n' +
-        '0xeE52f6E8F8F075Bb6119958c1ACeB16C788e57d6\n' +
-        '\n' +
-        '\n' +
-        'URI: http://localhost:1210/auth\n' +
-        'Version: 1\n' +
-        'Chain ID: 1\n' +
-        'Nonce: 4L08882G7gyr5UNAo\n' +
-        'Issued At: 2023-04-19T23:41:46.774Z\n' +
-        'Expiration Time: 2023-04-20T23:41:46.759Z',
-    address: '0xee52f6e8f8f075bb6119958c1aceb16c788e57d6'
-};
+    signedMessage: 'localhost wants you to sign in with your Ethereum account:\n' +
+      '0xb60D78D1ff955b90FA92056621e911040F1E397a\n' +
+      '\n' +
+      'This is a test statement.  You can put anything you want here.\n' +
+      '\n' +
+      'URI: https://localhost/login\n' +
+      'Version: 1\n' +
+      'Chain ID: 1\n' +
+      'Nonce: NQUivWD6giyIR6Nds\n' +
+      'Issued At: 2023-05-02T08:33:57.218Z',
+    address: '0xb60D78D1ff955b90FA92056621e911040F1E397a'
+  };
 
 const runLitAction = async () => {
     const litNodeClient = new LitJsSdkNodeJs.LitNodeClientNodeJs({
@@ -62,7 +62,7 @@ const runLitAction = async () => {
             // this is the string "Hello World" for testing
             toSign: [72, 101, 108, 108, 111, 32, 87, 111, 114, 108, 100],
             publicKey:
-                "0x044f9cbd78601c7ef5e4f95f43ddd3ad100782f2a5bec51032128af4a226f82b57342bea3371be09d3f88c7b26d954cf38e9bfca41d4399038d77174f6e809e07f",
+                "0x0443ccdc0178d2be400f45d3c69c96e6bbd6fb4b52f74408c0801db3a2c420db3f17eaa5e4ec44c625874a3a63ba738c6b1434c9c81e902644b025721bfbf922a9",
             sigName: "sig1",
         },
     });

@@ -50,7 +50,7 @@ const runLitAction = async () => {
         code: litActionCode,
         authSig,
         jsParams: {
-            toSign: [72, 101, 108, 108, 111, 32, 87, 111, 114, 108, 100],
+            toSign: "[72, 101, 108, 108, 111, 32, 87, 111, 114, 108, 100]",
             publicKey:
                 "0x044f9cbd78601c7ef5e4f95f43ddd3ad100782f2a5bec51032128af4a226f82b57342bea3371be09d3f88c7b26d954cf38e9bfca41d4399038d77174f6e809e07f",
             sigName: "sig1",
