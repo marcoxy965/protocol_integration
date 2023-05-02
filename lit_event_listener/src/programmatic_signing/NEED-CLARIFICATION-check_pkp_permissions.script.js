@@ -1,6 +1,50 @@
 import * as LitJsSdkNodeJs from "@lit-protocol/lit-node-client-nodejs";
 
-// Need more info on IPFS etc
+import { fromString as uint8arrayFromString } from "uint8arrays/from-string";
+import ethers from "ethers";
+import siwe from "siwe";
+
+// clarify - seems like ipfs hash expired / unpinned
+
+const runLitAction = async () => {
+
+  // Programmatically generate an AuthSig
+  const privKey =
+  "______your private key________";
+  const privKeyBuffer = uint8arrayFromString(privKey, "base16");
+  const wallet = new ethers.Wallet(privKeyBuffer);
+
+  const domain = "localhost";
+  const origin = "https://localhost/login";
+  const statement =
+    "This is a test statement.  You can put anything you want here.";
+
+  const siweMessage = new siwe.SiweMessage({
+    domain,
+    address: wallet.address,
+    statement,
+    uri: origin,
+    version: "1",
+    chainId: "1",
+  });
+
+  const messageToSign = siweMessage.prepareMessage();
+
+  const signature = await wallet.signMessage(messageToSign);
+
+  console.log("signature", signature);
+
+  const recoveredAddress = ethers.utils.verifyMessage(messageToSign, signature);
+
+  const authSig = {
+    sig: signature,
+    derivedVia: "web3.eth.personal.sign",
+    signedMessage: messageToSign,
+    address: recoveredAddress,
+  };
+
+
+  // Need more info on IPFS etc --> clarify
 // this code will be run on the node
 const litActionCode = `
 const go = async () => {
@@ -43,35 +87,16 @@ const go = async () => {
 go();
 `;
 
-// you need an AuthSig to auth with the nodes
-// normally you would obtain an AuthSig by calling LitJsSdk.checkAndSignAuthMessage({chain})
-const authSig = {
-    sig: '0xeb271a2a695b7bc3655c89919ba45469ed006ab48f2669cf30ac16c16e4f72b2502aa1d6b49b9679a7ce2e6417183172b944f5e915a5a0034a045abcb4740e5a1c',
-    derivedVia: 'web3.eth.personal.sign',
-    signedMessage: 'localhost:1210 wants you to sign in with your Ethereum account:\n' +
-      '0xeE52f6E8F8F075Bb6119958c1ACeB16C788e57d6\n' +
-      '\n' +
-      '\n' +
-      'URI: http://localhost:1210/auth\n' +
-      'Version: 1\n' +
-      'Chain ID: 1\n' +
-      'Nonce: 4L08882G7gyr5UNAo\n' +
-      'Issued At: 2023-04-19T23:41:46.774Z\n' +
-      'Expiration Time: 2023-04-20T23:41:46.759Z',
-    address: '0xee52f6e8f8f075bb6119958c1aceb16c788e57d6'
-  };
-
-const runLitAction = async () => {
     const litNodeClient = new LitJsSdkNodeJs.LitNodeClientNodeJs({
         alertWhenUnauthorized: false,
         litNetwork: "custom",
         debug: true,
         minNodeCount: 2,
-        bootstrapUrls: [
-            "http://localhost:7470",
-            "http://localhost:7471",
-            "http://localhost:7472",
-        ],
+        // bootstrapUrls: [
+        //     "http://localhost:7470",
+        //     "http://localhost:7471",
+        //     "http://localhost:7472",
+        // ],
     });
     await litNodeClient.connect();
     const results = await litNodeClient.executeJs({
@@ -80,7 +105,7 @@ const runLitAction = async () => {
         // all jsParams can be used anywhere in your litActionCode
         jsParams: {
             publicKey:
-                "0x044f9cbd78601c7ef5e4f95f43ddd3ad100782f2a5bec51032128af4a226f82b57342bea3371be09d3f88c7b26d954cf38e9bfca41d4399038d77174f6e809e07f",
+                "0x0443ccdc0178d2be400f45d3c69c96e6bbd6fb4b52f74408c0801db3a2c420db3f17eaa5e4ec44c625874a3a63ba738c6b1434c9c81e902644b025721bfbf922a9",
         },
     });
     console.log("results: ", results);

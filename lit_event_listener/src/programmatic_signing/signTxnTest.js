@@ -11140,7 +11140,7 @@ var import_transactions = __toESM(require_lib10(), 1);
 var import_bytes = __toESM(require_lib2(), 1);
 var import_js_sha3 = __toESM(require_sha3(), 1);
 console.log("running!");
-var publicKey = "0x0404e12210c57f81617918a5b783e51b6133790eb28a79f141df22519fb97977d2a681cc047f9f1a9b533df480eb2d816fb36606bd7c716e71a179efd53d2a55d1";
+var publicKey = "0x0443ccdc0178d2be400f45d3c69c96e6bbd6fb4b52f74408c0801db3a2c420db3f17eaa5e4ec44c625874a3a63ba738c6b1434c9c81e902644b025721bfbf922a9";
 var go = async () => {
   const fromAddress = (0, import_transactions.computeAddress)(publicKey);
   const latestNonce = await Lit.Actions.getLatestNonce({

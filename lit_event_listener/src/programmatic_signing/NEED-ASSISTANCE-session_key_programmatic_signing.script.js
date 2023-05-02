@@ -2,11 +2,14 @@
 
 import * as LitJsSdkNodeJs from "@lit-protocol/lit-node-client-nodejs";
 import { Wallet } from "@ethersproject/wallet";
-import { computeAddress } from "@ethersproject/transactions";
 import { SiweMessage } from "siwe";
 
-// this code will be run on the node
-const litActionCode = `
+
+// Need more details on if this is live or not
+const runLitAction = async () => {
+
+  // this code will be run on the node
+  const litActionCode = `
 const go = async () => {
   // this requests a signature share from the Lit Node
   // the signature share will be automatically returned in the response from the node
@@ -18,10 +21,8 @@ const go = async () => {
 go();
 `;
 
-// Need more details on if this is live or not
-const runLitAction = async () => {
   // mock a wallet
-  const wallet = new Wallet(process.env.LIT_MUMBAI_DEPLOYER_PRIVATE_KEY);
+  const wallet = new Wallet("__private_key__");
 
   const litNodeClient = new LitJsSdkNodeJs.LitNodeClientNodeJs({
     alertWhenUnauthorized: false,
@@ -73,7 +74,7 @@ const runLitAction = async () => {
       // this is the string "Hello World" for testing
       toSign: [72, 101, 108, 108, 111, 32, 87, 111, 114, 108, 100],
       publicKey:
-        "0x044f9cbd78601c7ef5e4f95f43ddd3ad100782f2a5bec51032128af4a226f82b57342bea3371be09d3f88c7b26d954cf38e9bfca41d4399038d77174f6e809e07f",
+        "0x0443ccdc0178d2be400f45d3c69c96e6bbd6fb4b52f74408c0801db3a2c420db3f17eaa5e4ec44c625874a3a63ba738c6b1434c9c81e902644b025721bfbf922a9",
       sigName: "sig1",
     },
   });

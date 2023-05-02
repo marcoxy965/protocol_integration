@@ -1,4 +1,4 @@
-import * as LitJsSdk from '@lit-protocol/lit-node-client';
+import * as LitJsSdkNodeJs from "@lit-protocol/lit-node-client-nodejs";
 import fs from "fs";
 import { serialize, recoverAddress } from "@ethersproject/transactions";
 import {
@@ -8,22 +8,52 @@ import {
   joinSignature,
 } from "@ethersproject/bytes";
 import { recoverPublicKey, computePublicKey } from "@ethersproject/signing-key";
+import { fromString as uint8arrayFromString } from "uint8arrays/from-string";
+import ethers from "ethers";
+import siwe from "siwe";
 
-// this code will be run on the node
-const litActionCode = fs.readFileSync("./build/signTxnTest.js");
-
-// you need an AuthSig to auth with the nodes
-// normally you would obtain an AuthSig by calling LitJsSdk.checkAndSignAuthMessage({chain})
-const authSig = {
-  sig: "0x2bdede6164f56a601fc17a8a78327d28b54e87cf3fa20373fca1d73b804566736d76efe2dd79a4627870a50e66e1a9050ca333b6f98d9415d8bca424980611ca1c",
-  derivedVia: "web3.eth.personal.sign",
-  signedMessage:
-    "localhost wants you to sign in with your Ethereum account:\n0x9D1a5EC58232A894eBFcB5e466E3075b23101B89\n\nThis is a key for Partiful\n\nURI: https://localhost/login\nVersion: 1\nChain ID: 1\nNonce: 1LF00rraLO4f7ZSIt\nIssued At: 2022-06-03T05:59:09.959Z",
-  address: "0x9D1a5EC58232A894eBFcB5e466E3075b23101B89",
-};
 
 const go = async () => {
-  const litNodeClient = new LitJsSdk.LitNodeClient({
+
+  // Programmatically generate an AuthSig
+  const privKey =
+  "______your private key________";
+  const privKeyBuffer = uint8arrayFromString(privKey, "base16");
+  const wallet = new ethers.Wallet(privKeyBuffer);
+
+  const domain = "localhost";
+  const origin = "https://localhost/login";
+  const statement =
+    "This is a test statement.  You can put anything you want here.";
+
+  const siweMessage = new siwe.SiweMessage({
+    domain,
+    address: wallet.address,
+    statement,
+    uri: origin,
+    version: "1",
+    chainId: "1",
+  });
+
+  const messageToSign = siweMessage.prepareMessage();
+
+  const signature = await wallet.signMessage(messageToSign);
+
+  console.log("signature", signature);
+
+  const recoveredAddress = ethers.utils.verifyMessage(messageToSign, signature);
+
+  const authSig = {
+    sig: signature,
+    derivedVia: "web3.eth.personal.sign",
+    signedMessage: messageToSign,
+    address: recoveredAddress,
+  };
+
+  // this code will be run on the node
+  const litActionCode = fs.readFileSync("./signTxnTest.js");
+
+  const litNodeClient = new LitJsSdkNodeJs.LitNodeClientNodeJs({
     alertWhenUnauthorized: false,
     minNodeCount: 6,
     debug: true,
@@ -58,8 +88,8 @@ const go = async () => {
   console.log("uncompressed recoveredPubkey", recoveredPubkey);
   const compressedRecoveredPubkey = computePublicKey(recoveredPubkey, true);
   console.log("compressed recoveredPubkey", compressedRecoveredPubkey);
-  const recoveredAddress = recoverAddress(dataSigned, encodedSig);
-  console.log("recoveredAddress", recoveredAddress);
+  const recoveredAddress2 = recoverAddress(dataSigned, encodedSig);
+  console.log("recoveredAddress", recoveredAddress2);
 
   // const txParams = {
   //   nonce: "0x0",
